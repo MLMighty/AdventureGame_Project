@@ -1,0 +1,331 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    /* Wert zwischen 0 (unsichtbar) und 1 (vollständig sichtbar) */
+    z-index: -1;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.GameTitle {
+    margin-top: 10px;
+    font-size: 50px;
+    text-decoration: underline solid;
+    color: rgb(156, 43, 43);
+    -webkit-text-stroke: 3px black;
+
+}
+
+/* Main  */
+
+
+/* Game Content Positon */
+
+.GameContent {
+    display: flex;
+    justify-content: center;
+}
+
+/* Dann der COntainer aller dinge style width heigh usw */
+
+#Content-Container {
+
+    margin-top: 25px;
+    padding: 10px;
+    background-color: rgb(71, 100, 86);
+    width: 700px;
+    height: 500px;
+    border: 4px black solid;
+    border-radius: 20px;
+
+}
+
+/* Danach die enthalteten sections Button..Text etc */
+
+.TextSection {
+    margin-top: 5px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#StoryText {
+
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+#AskPlayerName {
+    position: relative;
+    top: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Section für Bilder  */
+.Sectionphoto {}
+
+/* Section für btns */
+
+.SectionButtons {
+    position: relative;
+    top: 100px;
+    left: 220px;
+
+}
+
+#PlayerNameInput {
+    font-size: 20px;
+    text-align: center;
+}
+
+#StartGameBTN {
+    position: relative;
+    top: 50px;
+    right: 190px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    border: 4px rgb(0, 0, 0) solid;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(49, 45, 45);
+
+    color: white;
+
+}
+
+.ScriptBTNs {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    top: 20px;
+    right: -30px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 10px;
+    border: 4px rgb(0, 0, 0) solid;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(49, 45, 45);
+    cursor: pointer;
+    color: white;
+}
+
+#SkipButton{
+  position: relative;
+  left: 600px;
+  background-color: green;
+  font-size: larger;
+  font-weight: bold;
+  padding: 3px;
+  border-radius:10px ;
+  border: 2px black solid;
+  visibility: hidden;
+}
+
+#StatusContentBP {
+    margin-top: 25px;
+    padding: 10px;
+    background-color: rgb(154, 185, 69);
+    width: 700px;
+    height: 500px;
+    border: 4px black solid;
+    border-radius: 20px;
+}
+
+/* Hier kommen alle Sachen zur Section PlayerInfo hin (z.b Player Level Name etc) */
+#StatusContent {
+    margin-top: 25px;
+    padding: 10px;
+    background-color: rgb(91, 68, 28);
+    width: 700px;
+    height: 500px;
+    border: 4px black solid;
+    border-radius: 20px;
+}
+
+#HeadCHarInfos {
+    display: flex;
+    flex-direction: center;
+    position: relative;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+#PlayerName {
+    position: absolute;
+    right: 250px;
+    font-size: 34px;
+    text-decoration: underline solid;
+
+}
+
+#LevelOFPlayer {
+    position: absolute;
+    right: 385px;
+    top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#PlayerEXP {
+    position: absolute;
+    right: 180px;
+    top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* sECTION DES SPILER BILDES */
+
+#PlayerPICsection {
+    position: absolute;
+    top: 60px;
+
+}
+
+#PlayersPic {
+    border-radius: 5px;
+}
+
+/* Section des Charackters Fähigkeiten */
+#CHARtactics {
+    position: relative;
+    top: 96px;
+    left: 240px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+#CHARtacticsAnwers {
+    position: relative;
+    top: 96px;
+    left: 350px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.marginBotom {
+    margin-bottom: 3px;
+}
+
+/* Section der Charackter Infos */
+.CharackterInfo {
+    position: relative;
+    top: 130px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+
+
+}
+
+.CharackterInfoAnwers {
+    position: relative;
+    top: -46px;
+    left: 200px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.marginBotomInfo {
+    margin-bottom: 7px;
+
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* btn die gezeigt werden nachdme man sein CHarakter fertig gestellt hat */
+.ShowBPS {
+    display: none;
+}
+
+#CharBackpackStatusBTN {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.PictureBTN {
+    border-radius: 30px;
+    border: 4px white solid;
+}
+
+#BlackBorder {
+    border: 4px black solid;
+}
+
+/* Health bar style */
+
+.health-bar-position{
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.health-bar {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 200px;
+    height: 20px;
+    padding: 5px;
+    background: #ddd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+  }
+  .bar {
+    background: #c54;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    
+    transition: width .5s linear;
+  }
+  
+  .hit {
+    background: rgba(255,255,255,0.6);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 0px;
+    
+    transition: width .5s linear;
+  }

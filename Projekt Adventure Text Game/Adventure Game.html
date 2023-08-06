@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Game</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <img src="Bilder/forest2.jpg" class="background-image" alt="Hintergrundbild">
+    <header>
+        <!--  /The King Knights Adventure -->
+        <h1 class="GameTitle">The Ultimate Adventure</h1>
+
+    </header>
+
+    <main>
+        
+    <div class="health-bar-position">
+ <progress class="health-bar" id="Health" value="100" max="100">
+    <div class="bar">
+          <div class="hit"></div>
+    </div>
+  </div> 
+</div>
+  
+
+        <div class="GameContent">
+            <div id="Content-Container">
+                <section id="HideStartSection">
+
+                    <section class="TextSection">
+                        <p id="StoryText">Wilkommen Spieler, das ist wohl deine erste
+                            Geschichte in diesem Spiel, was? Naja keine angst so schwer ist das
+                            Spiel nicht, und hilfe bekommst du auch noch du musst nur immer auf
+                            den aufrufezeichen (!) Button Klicken. Viel Spaß dir, Abenteurer</p>
+
+                        <p id="AskPlayerName"> Oder... Wie Sollte ich dich sonst nennen?</p>
+                    </section>
+
+                    <Section class="Sectionphoto" id="VisualPhotoContainer">
+
+                    </Section>
+
+                    <section class="SectionButtons" id="SectionOFBtns">
+                        <!-- Section für die Buttons /inputs -->
+                        <div id="HideAfterStart">
+                            <input type="text" id="PlayerNameInput" placeholder="Gebe dein Namen ein">
+                            <button  onclick="import('./MainLogic.js').then(module => module.StartGame())" id="StartGameBTN" class="btn">Spiel Starten</button>
+                            
+                        </div>
+                       
+                    </section>
+                    <!-- Skip button weil mein bruder es wollte -->
+                    <button onclick="import('./SideLogics/MainStoryLogic.js').then(module=>module.SkipStorytext())" id="SkipButton" >Skip &#8921;</button>
+                </section>
+
+            </div>
+
+
+
+            <div id="BackShadowIFOpen" class="ShowShadow">
+
+                <div id="ShowAndHideStatusBackpack" class="hide">
+
+                    <div id="StatusContentBP">
+
+                        <div id="HeadCHarInfos">
+
+                            <h2 id="PlayerName">MightyLuna</h2>
+                            <p id="LevelOFPlayer">Level:</p>
+                            <p id="PlayerEXP">EXP:</p>
+
+                            <Section id="PlayerPICsection">
+                                <img src="Bilder/PlayerPic.jpg" id="PlayersPic" alt="" height="170px">
+                            </Section>
+
+                            <Section id="CHARtactics">
+                                <p class="marginBotom">Schnelligkeit :</p>
+                                <p class="marginBotom">Stärke :</p>
+                                <P class="marginBotom">Springhöhe :</P>
+                                <p class="marginBotom">ReichWeite :</p>
+                                <P class="marginBotom">Fähigkeit :</P>
+                            </Section>
+
+                            <Section id="CHARtacticsAnwers">
+                                <p class="marginBotom" id="Speed">8Km/min</p>
+                                <p class="marginBotom" id="Strength">8</p>
+                                <P class="marginBotom" id="Jump">1.23m</P>
+                                <p class="marginBotom" id="Range">Waffe ?</p>
+                                <P class="marginBotom" id="ability">???</P>
+                            </Section>
+
+
+
+                        </div>
+
+
+
+                        <div class="CharackterInfo">
+                            <section id="THEInfo">
+                                <p class="marginBotomInfo">Geschlecht :</p>
+                                <p class="marginBotomInfo">Alter : </p>
+                                <p class="marginBotomInfo">Größe :</p>
+                                <p class="marginBotomInfo">Waffe :</p>
+                                <p class="marginBotomInfo">Freunde :</p>
+                                <p class="marginBotomInfo">Story :</p>
+
+
+                            </section>
+                        </div>
+
+                        <div class="CharackterInfoAnwers">
+                            <section id="THEInfo">
+                                <p class="marginBotomInfo" id="Gender">Weiblich</p>
+                                <p class="marginBotomInfo" id="age">16</p>
+                                <p class="marginBotomInfo" id="Hight">Unkown</p>
+                                <p class="marginBotomInfo" id="Weapon">Bogen</p>
+                                <p class="marginBotomInfo" id="friends">Keine</p>
+                                <p class="marginBotomInfo" id="Story">War In einer anderen Universum ist jetzt in
+                                    diesem. </p>
+
+
+                            </section>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="ShowBPS" id="ShowBPSsection">
+            <div id="CharBackpackStatusBTN">
+                <section>
+                        <img src="Bilder/Statusleiste.png"  onclick="import('./MainLogic.js').then(module => module.ShowCharacterStatus())" id="BlackBorder"
+                        class="PictureBTN" alt="" width="80px" height="80px">
+                </section>
+                <section>
+                    <img src="Bilder/backpack.png" class="PictureBTN" alt="" width="80px" height="80px">
+                </section>
+
+            </div>
+        </div>
+
+        
+13
+
+    </main>
+
+ 
+    
+    <script type="module">
+      import { StartGame } from "./MainLogic.js";
+      import { SkipStorytext} from "./SideLogics/MainStoryLogic.js";
+    </script>
+
+</body>
+
+</html>
